@@ -47,6 +47,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r backend-drf/requirements.txt
 
-      - name: Check Django configuration and syntax
+      - name: Run Django system checks
         run: |
-          python -m py_compile backend-drf/manage.py
+          python backend-drf/manage.py check
